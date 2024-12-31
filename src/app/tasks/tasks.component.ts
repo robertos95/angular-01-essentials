@@ -17,21 +17,21 @@ export class TasksComponent {
       title: 'Master Angular',
       summary:
         'Learn all the basic and advanced features of Angular and how to apply them.',
-      duedate: '2025-12-31',
+      dueDate: '2025-12-31',
     },
     {
       id: 't2',
       userId: 'u3',
       title: 'Build first prototype',
       summary: 'Build a first prototype of the online shop website.',
-      duedate: '2026-05-22',
+      dueDate: '2026-05-22',
     },
     {
       id: 't3',
       userId: 'u3',
       title: 'Create a new component',
       summary: 'Create a new component for the online shop website.',
-      duedate: '2026-06-30',
+      dueDate: '2026-06-30',
     },
   ];
 
