@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 export class NewTaskComponent {
   @Output() cancel = new EventEmitter<void>();
 
+  // Using signal for 2 ways binding
+  // enteredTitle = signal('');
+
   enteredTitle = '';
   enteredSummary = '';
   enteredDueDate = '';
