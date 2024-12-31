@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NewTask } from '../task/task.model';
 
 @Component({
   selector: 'app-new-task',
@@ -9,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class NewTaskComponent {
   @Output() cancel = new EventEmitter<void>();
+  @Output() add = new EventEmitter<NewTask>();
 
   // Using signal for 2 ways binding
   // enteredTitle = signal('');
@@ -21,5 +23,11 @@ export class NewTaskComponent {
     this.cancel.emit();
   }
 
-  onSubmit() {}
+  onSubmit() {
+    this.add.emit({
+      title: this.enteredTitle,
+      summary: this.enteredSummary,
+      dueDate: this.enteredDueDate,
+    });
+  }
 }
