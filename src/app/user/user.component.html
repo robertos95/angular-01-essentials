@@ -1,5 +1,5 @@
 <div>
-  <button (click)="onSelectUser()">
+  <button [class.active]="isSelected" (click)="onSelectUser()">
     <!-- This works, but better use property binding as the code below -->
     <!-- <img src="{{ selectedUser.avatar }}" /> -->
     <img [src]="imagePath" [alt]="user.name" />

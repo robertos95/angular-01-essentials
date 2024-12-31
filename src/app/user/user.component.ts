@@ -17,6 +17,7 @@ export class UserComponent {
   // imagePath = computed(() => `assets/users/${this.avatar()}`);
 
   @Input({ required: true }) user!: User;
+  @Input({ required: true }) isSelected!: boolean;
   @Output() select = new EventEmitter<string>();
 
   get imagePath() {
